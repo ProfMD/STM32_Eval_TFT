@@ -1,0 +1,113 @@
+# STM32 Pollin Board
+
+menu.device_variant=Variant
+menu.bootloader_version=Bootloader version
+menu.upload_method=Upload method
+menu.cpu_speed=CPU Speed(MHz)
+menu.opt=Optimize
+
+
+########################### Pollin STM32 Eval Board ###########################
+
+pollinSTM32.name=Pollin STM32 Eval Board
+pollinSTM32.vid.0=0x1EAF
+pollinSTM32.pid.0=0x0004
+pollinSTM32.build.variant=generic_stm32f103v
+pollinSTM32.build.vect=VECT_TAB_ADDR=0x8000000
+pollinSTM32.build.core=maple
+pollinSTM32.build.board=GENERIC_STM32F103V
+pollinSTM32.upload.use_1200bps_touch=false
+pollinSTM32.upload.file_type=bin
+pollinSTM32.upload.auto_reset=true
+
+pollinSTM32.build.error_led_port=GPIOE
+pollinSTM32.build.error_led_pin=6
+
+pollinSTM32.menu.device_variant.STM32F103VC=STM32F103VC
+pollinSTM32.menu.device_variant.STM32F103VC.build.cpu_flags=-DMCU_STM32F103VC
+pollinSTM32.menu.device_variant.STM32F103VC.upload.maximum_size=262144
+pollinSTM32.menu.device_variant.STM32F103VC.upload.ram.maximum_size=49152
+pollinSTM32.menu.device_variant.STM32F103VC.upload.flash.maximum_size=262144
+pollinSTM32.menu.device_variant.STM32F103VC.build.ldscript=ld/stm32f103vc.ld
+
+pollinSTM32.menu.device_variant.STM32F103VD=STM32F103VD
+pollinSTM32.menu.device_variant.STM32F103VD.build.cpu_flags=-DMCU_STM32F103VD
+pollinSTM32.menu.device_variant.STM32F103VD.upload.maximum_size=393216
+pollinSTM32.menu.device_variant.STM32F103VD.upload.ram.maximum_size=65536
+pollinSTM32.menu.device_variant.STM32F103VD.upload.flash.maximum_size=393216
+pollinSTM32.menu.device_variant.STM32F103VD.build.ldscript=ld/stm32f103vd.ld
+
+pollinSTM32.menu.device_variant.STM32F103VE=STM32F103VE
+pollinSTM32.menu.device_variant.STM32F103VE.build.cpu_flags=-DMCU_STM32F103VE
+pollinSTM32.menu.device_variant.STM32F103VE.upload.maximum_size=524288
+pollinSTM32.menu.device_variant.STM32F103VE.upload.ram.maximum_size=65536
+pollinSTM32.menu.device_variant.STM32F103VE.upload.flash.maximum_size=524288
+pollinSTM32.menu.device_variant.STM32F103VE.build.ldscript=ld/stm32f103ve.ld
+
+#---------------------------- UPLOAD METHODS ---------------------------
+
+pollinSTM32.menu.upload_method.DFUUploadMethod=STM32duino bootloader
+pollinSTM32.menu.upload_method.DFUUploadMethod.upload.protocol=maple_dfu
+pollinSTM32.menu.upload_method.DFUUploadMethod.upload.tool=maple_upload
+pollinSTM32.menu.upload_method.DFUUploadMethod.build.upload_flags=-DSERIAL_USB -DGENERIC_BOOTLOADER 
+pollinSTM32.menu.upload_method.DFUUploadMethod.build.vect=VECT_TAB_ADDR=0x8002000
+pollinSTM32.menu.upload_method.DFUUploadMethod.build.ldscript=ld/stm32f103veDFU.ld
+pollinSTM32.menu.upload_method.DFUUploadMethod.upload.usbID=1EAF:0003
+pollinSTM32.menu.upload_method.DFUUploadMethod.upload.altID=2
+
+pollinSTM32.menu.upload_method.serialMethod=Serial
+pollinSTM32.menu.upload_method.serialMethod.upload.protocol=maple_serial
+pollinSTM32.menu.upload_method.serialMethod.upload.tool=serial_upload
+pollinSTM32.menu.upload_method.serialMethod.build.upload_flags=-DCONFIG_MAPLE_MINI_NO_DISABLE_DEBUG=1
+
+pollinSTM32.menu.upload_method.STLinkMethod=STLink
+pollinSTM32.menu.upload_method.STLinkMethod.upload.protocol=STLink
+pollinSTM32.menu.upload_method.STLinkMethod.upload.tool=stlink_upload
+pollinSTM32.menu.upload_method.STLinkMethod.build.upload_flags=-DCONFIG_MAPLE_MINI_NO_DISABLE_DEBUG=1 -DSERIAL_USB -DGENERIC_BOOTLOADER
+
+pollinSTM32.menu.upload_method.BMPMethod=BMP (Black Magic Probe)
+pollinSTM32.menu.upload_method.BMPMethod.upload.protocol=gdb_bmp
+pollinSTM32.menu.upload_method.BMPMethod.upload.tool=bmp_upload
+pollinSTM32.menu.upload_method.BMPMethod.build.upload_flags=-DCONFIG_MAPLE_MINI_NO_DISABLE_DEBUG
+
+#-- CPU Clock frequency
+pollinSTM32.menu.cpu_speed.speed_72mhz=72Mhz (Normal)
+pollinSTM32.menu.cpu_speed.speed_72mhz.build.f_cpu=72000000L
+
+pollinSTM32.menu.cpu_speed.speed_48mhz=48Mhz (Slow - with USB)
+pollinSTM32.menu.cpu_speed.speed_48mhz.build.f_cpu=48000000L
+
+pollinSTM32.menu.cpu_speed.speed_128mhz=Overclocked 128Mhz NO USB SERIAL. MANUAL RESET NEEDED TO UPLOAD
+pollinSTM32.menu.cpu_speed.speed_128mhz.build.f_cpu=128000000L
+
+
+#-- Optimizations
+pollinSTM32.menu.opt.osstd=Smallest (default)
+pollinSTM32.menu.opt.oslto=Smallest Code with LTO
+pollinSTM32.menu.opt.oslto.build.flags.optimize=-Os -flto
+pollinSTM32.menu.opt.oslto.build.flags.ldspecs=-flto
+pollinSTM32.menu.opt.o1std=Fast (-O1)
+pollinSTM32.menu.opt.o1std.build.flags.optimize=-O1
+pollinSTM32.menu.opt.o1std.build.flags.ldspecs=
+pollinSTM32.menu.opt.o1lto=Fast (-O1) with LTO
+pollinSTM32.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+pollinSTM32.menu.opt.o1lto.build.flags.ldspecs=-flto
+pollinSTM32.menu.opt.o2std=Faster (-O2)
+pollinSTM32.menu.opt.o2std.build.flags.optimize=-O2
+pollinSTM32.menu.opt.o2std.build.flags.ldspecs=
+pollinSTM32.menu.opt.o2lto=Faster (-O2) with LTO
+pollinSTM32.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+pollinSTM32.menu.opt.o2lto.build.flags.ldspecs=-flto
+pollinSTM32.menu.opt.o3std=Fastest (-O3)
+pollinSTM32.menu.opt.o3std.build.flags.optimize=-O3
+pollinSTM32.menu.opt.o3std.build.flags.ldspecs=
+pollinSTM32.menu.opt.o3lto=Fastest (-O3) with LTO
+pollinSTM32.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+pollinSTM32.menu.opt.o3lto.build.flags.ldspecs=-flto
+pollinSTM32.menu.opt.ogstd=Debug (-g)
+pollinSTM32.menu.opt.ogstd.build.flags.optimize=-Og
+pollinSTM32.menu.opt.ogstd.build.flags.ldspecs=
+
+
+##############################################################
+

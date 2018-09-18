@@ -1,50 +1,20 @@
 {
    "packages" : [
       {
-         "maintainer" : "stm32duino",
-         "email" : "?",
+         "maintainer" : "ProfMD",
+         "email" : "deegener@fb2.fra-uas.de",
          "platforms" : [
             {
-               "version" : "2018.9.15",
-               "name" : "STM32F1xx/GD32F1xx boards",
+               "version" : "2018.9.18",
+               "name" : "STM32F103WET6 board",
                "boards" : [
                   {
-                     "name" : "Maple Mini"
-                  },
-                  {
-                     "name" : "Maple (Rev 3)"
-                  },
-                  {
-                     "name" : "Maple (RET6)"
-                  },
-                  {
-                     "name" : "Microduino Core STM32 to Flash"
-                  },
-                  {
-                     "name" : "STM Nucleo F103RB (STLink)"
-                  },
-                  {
-                     "name" : "Generic STM32F103C series"
-                  },
-                  {
-                     "name" : "Generic STM32F103R series"
-                  },
-                  {
-                     "name" : "Generic STM32F103T series"
-                  },
-                  {
-                     "name" : "Generic STM32F103V series"
-                  },
-                  {
-                     "name" : "Generic STM32F103Z series"
-                  },
-                  {
-                     "name" : "Generic GD32F103C series"
+                     "name" : "STM32F103WET6 TFT board"
                   }
                ],
-               "size" : 8943988,
+               "size" : 1796128,
                "architecture" : "STM32F1",
-               "checksum" : "SHA-256:d23f8c09b6650ab2caac4d88cd74917bafe059027bb83d5863e1cfe081008f72",
+               "checksum" : "SHA-256:bf0aa2d9b04e4f717a14e7fc0490fc431fc98b2d652106d3bffc2bc6b3671a41",
                "toolsDependencies" : [
                   {
                      "version" : "2018.9.15",
@@ -57,9 +27,9 @@
                      "packager" : "arduino"
                   }
                ],
-               "url" : "http://dan.drown.org/stm32duino/STM32F1-2018.9.15.zip",
+               "url" : "",
                "category" : "STM32",
-               "archiveFileName" : "STM32F1-2018.9.15.zip"
+               "archiveFileName" : "STM32F103WET6.zip"
             }
          ],
          "tools" : [
