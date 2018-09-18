@@ -27,7 +27,7 @@
                      "packager" : "arduino"
                   }
                ],
-               "url" : "",
+               "url" : "https://github.com/ProfMD/STM32_Eval_TFT/raw/master/STM32F103WET6.zip",
                "category" : "STM32",
                "archiveFileName" : "STM32F103WET6.zip"
             }
