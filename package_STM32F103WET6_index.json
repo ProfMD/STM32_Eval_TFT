@@ -1,0 +1,116 @@
+{
+   "packages" : [
+      {
+         "maintainer" : "stm32duino",
+         "email" : "?",
+         "platforms" : [
+            {
+               "version" : "2018.9.15",
+               "name" : "STM32F1xx/GD32F1xx boards",
+               "boards" : [
+                  {
+                     "name" : "Maple Mini"
+                  },
+                  {
+                     "name" : "Maple (Rev 3)"
+                  },
+                  {
+                     "name" : "Maple (RET6)"
+                  },
+                  {
+                     "name" : "Microduino Core STM32 to Flash"
+                  },
+                  {
+                     "name" : "STM Nucleo F103RB (STLink)"
+                  },
+                  {
+                     "name" : "Generic STM32F103C series"
+                  },
+                  {
+                     "name" : "Generic STM32F103R series"
+                  },
+                  {
+                     "name" : "Generic STM32F103T series"
+                  },
+                  {
+                     "name" : "Generic STM32F103V series"
+                  },
+                  {
+                     "name" : "Generic STM32F103Z series"
+                  },
+                  {
+                     "name" : "Generic GD32F103C series"
+                  }
+               ],
+               "size" : 8943988,
+               "architecture" : "STM32F1",
+               "checksum" : "SHA-256:d23f8c09b6650ab2caac4d88cd74917bafe059027bb83d5863e1cfe081008f72",
+               "toolsDependencies" : [
+                  {
+                     "version" : "2018.9.15",
+                     "name" : "stm32tools",
+                     "packager" : "stm32duino"
+                  },
+                  {
+                     "version" : "4.8.3-2014q1",
+                     "name" : "arm-none-eabi-gcc",
+                     "packager" : "arduino"
+                  }
+               ],
+               "url" : "http://dan.drown.org/stm32duino/STM32F1-2018.9.15.zip",
+               "category" : "STM32",
+               "archiveFileName" : "STM32F1-2018.9.15.zip"
+            }
+         ],
+         "tools" : [
+            {
+               "systems" : [
+                  {
+                     "checksum" : "SHA-256:820a0593c6c051002eb922b06753e5a47995d1899baff79699ddea41e379f726",
+                     "url" : "http://dan.drown.org/stm32duino/tools_win-2018.9.15.zip",
+                     "archiveFileName" : "tools_win-2018.9.15.zip",
+                     "host" : "i686-mingw32",
+                     "size" : 5753102
+                  },
+                  {
+                     "checksum" : "SHA-256:25a194f94054e8b2b68ce67b666643fda48b5d505dafbc6b03890cad2f149e9e",
+                     "url" : "http://dan.drown.org/stm32duino/tools_macosx-2018.9.15.tar.gz",
+                     "archiveFileName" : "tools_macosx-2018.9.15.tar.gz",
+                     "size" : 817179,
+                     "host" : "x86_64-apple-darwin"
+                  },
+                  {
+                     "checksum" : "SHA-256:25a194f94054e8b2b68ce67b666643fda48b5d505dafbc6b03890cad2f149e9e",
+                     "url" : "http://dan.drown.org/stm32duino/tools_macosx-2018.9.15.tar.gz",
+                     "archiveFileName" : "tools_macosx-2018.9.15.tar.gz",
+                     "host" : "i386-apple-darwin",
+                     "size" : 817179
+                  },
+                  {
+                     "checksum" : "SHA-256:2446e222c1a097dd576d3b4772b3a7ffd76dc78a65d25069f273fa62a0743d1c",
+                     "url" : "http://dan.drown.org/stm32duino/tools_linux64-2018.9.15.tar.gz",
+                     "archiveFileName" : "tools_linux64-2018.9.15.tar.gz",
+                     "size" : 951356,
+                     "host" : "x86_64-pc-linux-gnu"
+                  },
+                  {
+                     "checksum" : "SHA-256:36bfa8ba5b1f2ceb4ce75e35417a897088e9fc3694f88fb68a5cebf8ea0e34e4",
+                     "url" : "http://dan.drown.org/stm32duino/tools_linux-2018.9.15.tar.gz",
+                     "archiveFileName" : "tools_linux-2018.9.15.tar.gz",
+                     "host" : "i686-pc-linux-gnu",
+                     "size" : 898896
+                  }
+               ],
+               "version" : "2018.9.15",
+               "name" : "stm32tools"
+            }
+         ],
+         "help" : {
+            "online" : "http://www.stm32duino.com/"
+         },
+         "websiteURL" : "http://www.stm32duino.com/",
+         "name" : "stm32duino"
+      }
+   ]
+}
+
