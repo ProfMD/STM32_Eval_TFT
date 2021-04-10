@@ -5,6 +5,7 @@ menu.bootloader_version=Bootloader version
 menu.upload_method=Upload method
 menu.cpu_speed=CPU Speed(MHz)
 menu.opt=Optimize
+menu.can=Switch CAN Bus on
 
 
 ########################### Pollin STM32 Eval Board ###########################
@@ -108,6 +109,12 @@ pollinSTM32.menu.opt.ogstd=Debug (-g)
 pollinSTM32.menu.opt.ogstd.build.flags.optimize=-Og
 pollinSTM32.menu.opt.ogstd.build.flags.ldspecs=
 
+#-- CAN_Bus
+pollinSTM32.menu.can.off=Off (default)
+pollinSTM32.menu.can.off.build.flags.can=
+pollinSTM32.menu.can.on=On
+pollinSTM32.menu.can.on=With Can_rx Interrupt
+pollinSTM32.menu.can.on.build.flags.can=-DCANSUPPORT
 
 ##############################################################
 

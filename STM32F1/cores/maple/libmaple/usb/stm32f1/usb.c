@@ -44,6 +44,16 @@
 #include "usb_type.h"
 #include "usb_core.h"
 
+
+/***************
+*  CAN support by mde
+* 
+***************/
+#ifdef CANSUPPORT
+extern void can_interrupt(void);
+#endif
+
+
 static void dispatch_ctr_lp(void);
 
 /*
@@ -258,6 +268,11 @@ __weak void __irq_usb_lp_can_rx0(void) {
         dispatch_ctr_lp();
     }
 #endif
+
+#ifdef CANSUPPORT
+	can_interrupt();
+#endif
+
 }
 
 /*
